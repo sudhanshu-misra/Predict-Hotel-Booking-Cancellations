@@ -1,0 +1,81 @@
+Top Features Affecting Hotel Booking Cancellations
+Using the trained Random Forest model, feature importances were extracted from the final pipeline. The top predictors are ranked below by their importance score.
+
+1. lead_time (0.205) The longer a guest books in advance, the higher the cancellation probability. Plans made far in the future are more likely to change.
+
+2. no_of_special_requests (0.108) Guests with more requests are less likely to cancel because they are more invested in the stay.
+
+3. avg_price_per_room (0.099) Higher room prices tend to correlate with higher cancellations, likely due to price sensitivity or guests finding cheaper alternatives.
+
+4. avg_price_per_person (0.087) Guests paying more per person may cancel more frequently due to budget changes or expectation mismatches.
+
+5. arrival_date (0.075) Cancellations vary by specific dates within a month, indicating peak vs. off-peak patterns influence behavior.
+
+6. arrival_month (0.071) Seasonality strongly affects cancellations (e.g., holidays, festivals, and school vacations).
+
+7. lead_time_cat_long (0.042) Categorical confirmation that long-term bookings are the most volatile segment.
+
+8. total_nights (0.037) Longer stays generally carry more uncertainty, leading to a slightly higher cancellation likelihood.
+
+9. lead_time_cat_short (0.036) Short bookings are more stable; cancellations are significantly lower for bookings made with ≤30 days lead time.
+
+10. no_of_week_nights (0.036) Longer weekday stays often correspond to work travel, which carries moderate cancellation risks.
+
+11. market_segment_type_Online (0.030) Online bookings show higher cancellation rates compared to offline methods (walk-ins & agents are more stable).
+
+12. no_of_weekend_nights (0.029) Short weekend getaways cancel more often, likely due to weather changes or shifting personal plans.
+
+13. arrival_year (0.022) A slight yearly trend exists, likely reflecting market conditions or travel recovery phases.
+
+14. market_segment_type_Offline (0.020) Offline bookings have lower cancellation rates; traditional channels prove to be more stable.
+
+15. lead_time_cat_medium (0.015) Medium-term bookings remain moderately stable compared to long or short extremes.
+
+16. total_guests (0.013) Group bookings can be harder to coordinate, slightly increasing the probability of cancellation.
+
+17. no_of_adults (0.011) More adults implies more coordination required, leading to a slightly stronger cancellation tendency.
+
+18. meal_plan_1 (0.007) Guests choosing specific meal plans may be more committed to the booking.
+
+19. car_parking_required (0.007) Travelers requiring parking (usually driving to the venue) show lower cancellation behavior.
+
+20. Room type 1 reserved (0.006) Specific room types (likely standard rooms) dominate booking behavior but have low individual predictive power.
+
+Business Interpretation
+The model shows that cancellations are most influenced by booking behavior (lead time), seasonality (arrival month/date), pricing (ADR per room/person), and booking channel (online/offline).
+
+Lead Time & Pricing: Guests who plan far ahead or pay higher prices are significantly more likely to cancel.
+
+Commitment Indicators: Guests who make special requests or use offline booking channels tend to be more committed and less likely to cancel.
+
+Seasonality: This plays a major role, suggesting that hotels should monitor monthly trends closely and adjust cancellation policies during volatile periods.
+Strategic Recommendations
+Based on the model’s findings—specifically the impact of lead time, pricing, and guest engagement—the following strategies are recommended to reduce cancellation rates and mitigate revenue loss:
+
+1. Implement Dynamic Cancellation Policies (Targeting Lead Time) Since lead_time is the strongest predictor of cancellations (longer lead time = higher risk), the hotel should move away from a "one-size-fits-all" policy.
+
+Action: Implement stricter cancellation policies for bookings made more than 90 days in advance (e.g., require a non-refundable deposit).
+
+Action: Offer flexible cancellation only to "short lead time" bookings (≤ 30 days), as these guests are statistically less likely to cancel.
+
+2. Increase Guest "Stickiness" (Targeting Special Requests) The data shows that guests with no_of_special_requests are significantly less likely to cancel.
+
+Action: Actively encourage guests to make requests during the booking process.
+
+Action: Send automated pre-arrival emails (e.g., "Customize your stay") asking about pillow preferences, room views, or dietary needs. This psychological "investment" increases the guest's commitment to the trip.
+
+3. Value-Based Pricing Strategies (Targeting Price Sensitivity) High avg_price_per_room correlates with cancellations, suggesting guests may be "shopping around" for better deals after booking.
+
+Action: Instead of lowering rates, bundle high-value add-ons (free breakfast, parking, or spa credits) with higher room rates. This makes it harder for the guest to find a comparable "deal" elsewhere, reducing the urge to cancel and rebook.
+
+4. Channel-Specific Retention (Targeting Market Segments) Market_segment_type_Online has a higher churn rate compared to offline segments.
+
+Action: Offer exclusive "Direct Booking" perks (e.g., late checkout or a 5% discount) for guests who switch from OTAs (Online Travel Agencies) to booking directly on the hotel website.
+
+Action: For Corporate/Offline segments (low cancellation risk), focus on long-term contracts and loyalty rewards to maintain this stable revenue stream.
+
+5. Smart Overbooking Strategy (Targeting Seasonality) Since arrival_month and arrival_date influence cancellations, the hotel can predict "high cancellation" periods.
+
+Action: During months identified as high-risk by the model, slightly increase overbooking limits to compensate for the predicted wash-down.
+
+Action: During low-risk months (stable bookings), reduce overbooking to avoid walking guests.

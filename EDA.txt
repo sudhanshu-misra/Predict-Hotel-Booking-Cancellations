@@ -1,0 +1,22 @@
+Analysis of Numerical Features & Correlation
+Below is the breakdown of how numerical features correlate with the cancellation status:
+
+lead_time (0.43): The Strongest Predictor This shows the highest positive correlation. Longer lead times significantly increase the likelihood of cancellation. This aligns with business logic: bookings made far in advance carry higher uncertainty regarding future plans compared to last-minute bookings.
+
+no_of_special_requests (–0.25): The "Commitment" Indicator This feature has a meaningful negative correlation. Guests who make special requests are less likely to cancel. This serves as a proxy for engagement; a guest who takes the time to customize their stay has firmer expectations and higher commitment.
+
+arrival_year (0.18): Temporal Trends This shows a weak-to-moderate correlation. While not a behavioral trait of the user, it captures dataset-specific trends (e.g., specific years having higher cancellation rates due to external factors like post-COVID travel surges).
+
+avg_price_per_room (0.14): Price Sensitivity There is a slight positive correlation indicating that as the room price increases, the probability of cancellation rises, likely due to price sensitivity or guests shopping around for better deals.
+
+repeated_guest (–0.10): Customer Loyalty Returning guests show a lower probability of canceling. This confirms the logical pattern that repeat customers are a more stable and reliable demographic.
+
+required_car_parking_space (–0.08): Logistical Constraints Guests requesting parking are less likely to cancel. These are likely travelers driving to the location with defined logistics, implying firmer travel plans.
+
+Duration Features (no_of_week_nights / weekend_nights) Longer stays show a slight positive correlation with cancellations, potentially due to the higher complexity and uncertainty involved in planning longer trips.
+
+Low Impact Features Features such as no_of_previous_cancellations, no_of_children, and specific arrival dates show negligible correlation in isolation, though they are retained for model completeness.
+
+Key Takeaway
+
+Correlations are generally weak to moderate, meaning no single numeric variable fully determines cancellation. This indicates that feature engineering and categorical variables will be important.

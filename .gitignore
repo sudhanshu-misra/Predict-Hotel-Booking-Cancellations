@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+env/
+venv/
+.idea/
+.vscode/
+.DS_Store
+*.joblib
+*.pickle
+*.ipynb_checkpoints
+*.log
