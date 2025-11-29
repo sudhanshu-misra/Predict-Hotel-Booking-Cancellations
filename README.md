@@ -1,4 +1,4 @@
-# Hotel Booking Cancellation Prediction Pipeline
+# Hotel Booking Cancellations Prediction Pipeline
 
 A fully modular, production-ready machine learning pipeline for predicting hotel booking cancellations.  
 The project includes data processing, feature engineering, model training, hyperparameter tuning, evaluation, prediction interface, and CI/CD automation using GitHub Actions.
@@ -19,7 +19,7 @@ The project includes data processing, feature engineering, model training, hyper
 ## Project Structure
 
 ```
-hotel_booking_pipeline/
+Predict-Hotel-Booking-Cancellations/
 ├── hotel_bookings_pipeline/
 │   ├── data_loader.py
 │   ├── preprocess.py
